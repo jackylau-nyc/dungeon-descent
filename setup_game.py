@@ -81,7 +81,7 @@ class MainMenu(input_handlers.BaseEventHandler):
         console.print(
             console.width // 2,
             console.height // 2 - 4,
-            "TOWER OF THE FALSE MONARCH",
+            "Dungeon Descent",
             fg=color.menu_title,
             alignment=tcod.CENTER,
         )

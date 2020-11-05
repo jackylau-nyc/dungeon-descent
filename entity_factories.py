@@ -41,7 +41,7 @@ orc = Actor(
 
 ogre = Actor(
     char="O",
-    color=(0, 90, 0),
+    color=(0, 80, 0),
     name="Ogre",
     ai_cls=HostileEnemy,
     equipment=Equipment(),
@@ -75,7 +75,7 @@ health_potion = Item(
 mega_potion = Item(
     char="U",
     color=(127, 0, 255),
-    name="Health Potion",
+    name="Mega Potion",
     consumable=consumable.HealingConsumable(amount=15),
 )
 
