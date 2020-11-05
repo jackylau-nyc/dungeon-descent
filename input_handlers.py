@@ -22,14 +22,14 @@ if TYPE_CHECKING:
 
 MOVE_KEYS = {
     # Arrow keys.
-    tcod.event.K_UP: (0, -1),
-    tcod.event.K_DOWN: (0, 1),
-    tcod.event.K_LEFT: (-1, 0),
-    tcod.event.K_RIGHT: (1, 0),
-    tcod.event.K_HOME: (-1, -1),
-    tcod.event.K_END: (-1, 1),
-    tcod.event.K_PAGEUP: (1, -1),
-    tcod.event.K_PAGEDOWN: (1, 1),
+    tcod.event.K_w: (0, -1),
+    tcod.event.K_s: (0, 1),
+    tcod.event.K_a: (-1, 0),
+    tcod.event.K_d: (1, 0),
+    tcod.event.K_q: (-1, -1),
+    tcod.event.K_z: (-1, 1),
+    tcod.event.K_e: (1, -1),
+    tcod.event.K_c: (1, 1),
     # Numpad keys.
     tcod.event.K_KP_1: (-1, 1),
     tcod.event.K_KP_2: (0, 1),
@@ -39,21 +39,12 @@ MOVE_KEYS = {
     tcod.event.K_KP_7: (-1, -1),
     tcod.event.K_KP_8: (0, -1),
     tcod.event.K_KP_9: (1, -1),
-    # Vi keys.
-    tcod.event.K_h: (-1, 0),
-    tcod.event.K_j: (0, 1),
-    tcod.event.K_k: (0, -1),
-    tcod.event.K_l: (1, 0),
-    tcod.event.K_y: (-1, -1),
-    tcod.event.K_u: (1, -1),
-    tcod.event.K_b: (-1, 1),
-    tcod.event.K_n: (1, 1),
 }
 
 WAIT_KEYS = {
     tcod.event.K_PERIOD,
     tcod.event.K_KP_5,
-    tcod.event.K_CLEAR,
+    tcod.event.K_x,
 }
 
 CONFIRM_KEYS = {
@@ -256,29 +247,29 @@ class LevelUpEventHandler(AskUserEventHandler):
             bg=(0, 0, 0),
         )
 
-        console.print(x=x + 1, y=1, string="Congratulations! You level up!")
+        console.print(x=x + 1, y=1, string="Congratulations! You leveled up!")
         console.print(x=x + 1, y=2, string="Select an attribute to increase.")
 
         console.print(
             x=x + 1,
             y=4,
-            string=f"a) Constitution (+20 HP, from {self.engine.player.fighter.max_hp})",
+            string=f"1) Constitution (+10 HP, from {self.engine.player.fighter.max_hp})",
         )
         console.print(
             x=x + 1,
             y=5,
-            string=f"b) Strength (+1 attack, from {self.engine.player.fighter.power})",
+            string=f"2) Strength (+1 attack, from {self.engine.player.fighter.power})",
         )
         console.print(
             x=x + 1,
             y=6,
-            string=f"c) Agility (+1 defense, from {self.engine.player.fighter.defense})",
+            string=f"3) Agility (+1 defense, from {self.engine.player.fighter.defense})",
         )
 
     def ev_keydown(self, event: tcod.event.KeyDown) -> Optional[ActionOrHandler]:
         player = self.engine.player
         key = event.sym
-        index = key - tcod.event.K_a
+        index = key - tcod.event.K_1
 
         if 0 <= index <= 2:
             if index == 0:
@@ -345,7 +336,7 @@ class InventoryEventHandler(AskUserEventHandler):
 
         if number_of_items_in_inventory > 0:
             for i, item in enumerate(self.engine.player.inventory.items):
-                item_key = chr(ord("a") + i)
+                item_key = 1+i
                 is_equipped = self.engine.player.equipment.item_is_equipped(item)
 
                 item_string = f"({item_key}) {item.name}"
@@ -360,9 +351,9 @@ class InventoryEventHandler(AskUserEventHandler):
     def ev_keydown(self, event: tcod.event.KeyDown) -> Optional[ActionOrHandler]:
         player = self.engine.player
         key = event.sym
-        index = key - tcod.event.K_a
+        index = key - tcod.event.K_1
 
-        if 0 <= index <= 26:
+        if 0 <= index <= 9:
             try:
                 selected_item = player.inventory.items[index]
             except IndexError:
@@ -516,9 +507,7 @@ class MainGameEventHandler(EventHandler):
 
         player = self.engine.player
 
-        if key == tcod.event.K_PERIOD and modifier & (
-            tcod.event.KMOD_LSHIFT | tcod.event.KMOD_RSHIFT
-        ):
+        if key == tcod.event.K_h:
             return actions.TakeStairsAction(player)
 
         if key in MOVE_KEYS:
@@ -530,22 +519,22 @@ class MainGameEventHandler(EventHandler):
         elif key == tcod.event.K_ESCAPE:
             raise SystemExit()
         
-        elif key == tcod.event.K_v:
+        elif key == tcod.event.K_TAB:
             return HistoryViewer(self.engine)
 
-        elif key == tcod.event.K_g:
+        elif key == tcod.event.K_u:
             action = PickupAction(player)
 
         elif key == tcod.event.K_i:
             return InventoryActivateHandler(self.engine)
         
-        elif key == tcod.event.K_d:
+        elif key == tcod.event.K_o:
             return InventoryDropHandler(self.engine)
 
-        elif key == tcod.event.K_c:
+        elif key == tcod.event.K_p:
             return CharacterScreenEventHandler(self.engine)
 
-        elif key == tcod.event.K_SLASH:
+        elif key == tcod.event.K_LEFTBRACKET:
             return LookHandler(self.engine)
 
         # No valid key was pressed

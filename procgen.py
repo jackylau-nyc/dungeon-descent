@@ -16,27 +16,33 @@ if TYPE_CHECKING:
 
 max_items_by_floor = [
     (1, 1),
-    (4, 2),
+    (5, 2),
+    (10, 3),
 ]
 
 max_monsters_by_floor = [
-    (1, 2),
-    (4, 3),
+    (1, 1),
+    (3, 3),
     (6, 5),
+    (9, 7),
 ]
 
 item_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.health_potion, 35)],
+    0: [(entity_factories.health_potion, 40)],
     2: [(entity_factories.confusion_scroll, 10)],
-    4: [(entity_factories.lightning_scroll, 25), (entity_factories.sword, 5)],
-    6: [(entity_factories.fireball_scroll, 25), (entity_factories.chain_mail, 15)],
+    4: [(entity_factories.leather_armor, 15), (entity_factories.dagger, 15)],
+    6: [(entity_factories.mega_potion, 20), (entity_factories.lightning_scroll, 20), (entity_factories.fireball_scroll, 20)],
+    8: [(entity_factories.sword, 5), (entity_factories.chain_mail, 5)],
+    10: [(entity_factories.mega_potion, 50)],
 }
 
 enemy_chances: Dict[int, List[Tuple[Entity, int]]] = {
-    0: [(entity_factories.orc, 80)],
-    3: [(entity_factories.troll, 15)],
-    5: [(entity_factories.troll, 30)],
-    7: [(entity_factories.troll, 60)],
+    0: [(entity_factories.goblin, 75)],
+    3: [(entity_factories.orc, 15)],
+    5: [(entity_factories.orc, 30)],
+    7: [(entity_factories.orc, 60), (entity_factories.ogre, 15)],
+    9: [(entity_factories.ogre, 45)],
+    10: [(entity_factories.goblin, 0)],
 }
 
 def get_max_value_for_floor(

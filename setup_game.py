@@ -26,9 +26,9 @@ def new_game() -> Engine:
     map_width = 80
     map_height = 43
 
-    room_max_size = 10
+    room_max_size = 12
     room_min_size = 6
-    max_rooms = 30
+    max_rooms = 25
 
     player = copy.deepcopy(entity_factories.player)
 
@@ -47,20 +47,20 @@ def new_game() -> Engine:
     engine.update_fov()
 
     engine.message_log.add_message(
-        "Hello and welcome, adventurer, to yet another dungeon!", color.welcome_text
+        "Hello and welcome, adventurer, to the tower!", color.welcome_text
     )
 
-    dagger = copy.deepcopy(entity_factories.dagger)
-    leather_armor = copy.deepcopy(entity_factories.leather_armor)
+    stick = copy.deepcopy(entity_factories.stick)
+    padded_clothes = copy.deepcopy(entity_factories.padded_clothes)
 
-    dagger.parent = player.inventory
-    leather_armor.parent = player.inventory
+    stick.parent = player.inventory
+    padded_clothes.parent = player.inventory
 
-    player.inventory.items.append(dagger)
-    player.equipment.toggle_equip(dagger, add_message=False)
+    player.inventory.items.append(stick)
+    player.equipment.toggle_equip(stick, add_message=False)
 
-    player.inventory.items.append(leather_armor)
-    player.equipment.toggle_equip(leather_armor, add_message=False)
+    player.inventory.items.append(padded_clothes)
+    player.equipment.toggle_equip(padded_clothes, add_message=False)
     
     return engine
 
@@ -81,7 +81,7 @@ class MainMenu(input_handlers.BaseEventHandler):
         console.print(
             console.width // 2,
             console.height // 2 - 4,
-            "TOMBS OF THE ANCIENT KINGS",
+            "TOWER OF THE FALSE MONARCH",
             fg=color.menu_title,
             alignment=tcod.CENTER,
         )
@@ -95,7 +95,7 @@ class MainMenu(input_handlers.BaseEventHandler):
 
         menu_width = 24
         for i, text in enumerate(
-            ["[N] Play a new game", "[C] Continue last game", "[Q] Quit"]
+            ["[Q] Quit", "[A] Play a new game", "[Z] Continue last game"]
         ):
             console.print(
                 console.width // 2,
@@ -112,7 +112,7 @@ class MainMenu(input_handlers.BaseEventHandler):
     ) -> Optional[input_handlers.BaseEventHandler]:
         if event.sym in (tcod.event.K_q, tcod.event.K_ESCAPE):
             raise SystemExit()
-        elif event.sym == tcod.event.K_c:
+        elif event.sym == tcod.event.K_z:
             try:
                 return input_handlers.MainGameEventHandler(load_game("savegame.sav"))
             except FileNotFoundError:
@@ -121,7 +121,7 @@ class MainMenu(input_handlers.BaseEventHandler):
                 traceback.print_exc()  # Print to stderr.
                 return input_handlers.PopupMessage(self, f"Failed to load save:\n{exc}")
             pass
-        elif event.sym == tcod.event.K_n:
+        elif event.sym == tcod.event.K_a:
             return input_handlers.MainGameEventHandler(new_game())
 
         return None
