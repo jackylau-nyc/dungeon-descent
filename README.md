@@ -1,6 +1,6 @@
 # Dungeon Descent
 <!-- ![Main Menu](https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/menu_background.png | width=100) -->
-<img src="https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/menu_background.png" width="800">
+<img src="https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/readme-intro.png" width="800">
 - A rogue-like dungeon crawler made in Python and using the TCOD library
 
 ## Index
@@ -81,7 +81,7 @@ List all the pre-requisites the system needs to develop this project.
 - [Roguelike Tutorial](http://rogueliketutorials.com/)
 
 ## Gallery
-Pictures of your project.
+<img src="https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/gameplay_ss.png" width="800">
 
 ## Credit/Acknowledgment
 Me!
