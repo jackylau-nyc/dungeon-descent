@@ -51,7 +51,7 @@ Left Hand Controls | Right Hand Controls
 [ESC] - Quit Game |
 [TAB] - History |
 
-Mouse can be used to highlight tiles and select targets
+Mouse can be used to hover over tiles and select targets
 
 ## Development
 
@@ -67,15 +67,11 @@ List all the pre-requisites the system needs to develop this project.
 
  1. **Report a bug**
 
- If you think you have encountered a bug, and I should know about it, feel free to report it [here]() and I will take care of it.
+ If you think you have encountered a bug, and I should know about it, feel free to report it [here](https://github.com/jackylau-nyc/dungeon-descent/issues) and I will take care of it.
 
- 2. **Request a feature**
+ 2. **Create a pull request**
 
- You can also request for a feature [here](), and if it will viable, it will be picked for development.  
-
- 3. **Create a pull request**
-
- It can't get better then this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here]() and make a pull request.
+ It can't get better then this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/jackylau-nyc/dungeon-descent/pulls) and make a pull request.
 
  > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
 
