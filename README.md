@@ -1,7 +1,6 @@
 # Dungeon Descent
-<!-- ![Main Menu](https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/menu_background.png | width=100) -->
+A rogue-like dungeon crawler game made in Python and using the TCOD library
 <img src="https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/readme-intro.png" width="800">
-- A rogue-like dungeon crawler made in Python and using the TCOD library
 
 ## Index
 
@@ -18,7 +17,7 @@
 - [Credit/Acknowledgment](#star2-creditacknowledgment)
 
 ## About
-Add a detailed introduction about the project here, everything you want the reader to know.
+A multi-level dungeon crawler game entirely in the terminal. A tunneling algorithm was used to procedurally generate each floor of the dungeon with items and monsters scattered throughout the rooms. A basic AI is implemented to control the monsters actions, the engine handles the overworld view, and the input-handler handles player input. As you survive combat, you gain experience to level up and as you progress through the dungeon floors, the loot gets better but the difficulty scales up.
 
 ## Usage
 
