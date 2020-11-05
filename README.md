@@ -1,1 +1,90 @@
-# roguelike-dev
+# Dungeon Descent
+![Main Menu](menu-background.png)
+- A rogue-like dungeon crawler made in Python and using the TCOD library
+
+## Index
+
+- [About](#about)
+- [Usage](#usage)
+  - [Installation](#installation)
+  - [Commands](#commands)
+  - [Controls](#controls)
+- [Development](#development)
+  - [Pre-Requisites](#pre-requisites)
+  - [Contribution](#contribution)
+- [Resources](#resources)
+- [Gallery](#camera-gallery)
+- [Credit/Acknowledgment](#star2-creditacknowledgment)
+
+## About
+Add a detailed introduction about the project here, everything you want the reader to know.
+
+## Usage
+
+
+### Installation
+- Clone the repository into the folder of your choice
+
+```
+$ git clone "https://github.com/jackylau-nyc/roguelike-dev.git"
+```
+
+### Commands
+- After navigating to the folder, you can start the game by running
+```
+$ python main.py
+```
+
+### Controls
+Left Hand Controls | Right Hand Controls
+------------ | -------------
+[W] - Upwards Movement | [U] - Pickup Item
+[A] - Leftwards Movement | [ I ] - Open Up Inventory Menu to Use Consumeables or Equip/Unequip Wearables
+[S] - Downwards Movement | [O] - Open Up Inventory Menu to Drop Item
+[D] - Rightwards Movement | [P] - Player Character Information
+[Q] - Upper-Left Movement | [H] - Descend Staircase
+[E] - Upper-Right Movement | [ [ ] - Look at highlighted tile
+[Z] - Lower-Left Movement | [1-9] Use/Equip/Unequip or Drop Item after Opening Corresponding Inventory Menu
+[C] - Upper-Right Movement |
+[X] - Wait |
+[ESC] - Quit Game |
+[TAB] - History |
+
+Mouse can be used
+
+## Development
+
+### Pre-Requisites
+List all the pre-requisites the system needs to develop this project.
+- [Python 3.7 or higher](https://www.python.org/downloads/) (Currently using 3.8 as of July 2020)
+- The latest version of [TCOD Library](https://python-tcod.readthedocs.io/en/latest/installation.html)
+- An editor of choice (I used VScode)
+
+ ### Contribution
+
+ Your contributions are always welcome and appreciated. Following are the things you can do to contribute to this project.
+
+ 1. **Report a bug**
+
+ If you think you have encountered a bug, and I should know about it, feel free to report it [here]() and I will take care of it.
+
+ 2. **Request a feature**
+
+ You can also request for a feature [here](), and if it will viable, it will be picked for development.  
+
+ 3. **Create a pull request**
+
+ It can't get better then this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here]() and make a pull request.
+
+ > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
+
+## Resources
+- [RogueBasin](http://www.roguebasin.com/index.php?title=Main_Page)
+- [Roguelike Development Subreddit](https://www.reddit.com/r/roguelikedev/)
+- [Roguelike Tutorial](http://rogueliketutorials.com/)
+
+## Gallery
+Pictures of your project.
+
+## Credit/Acknowledgment
+Me!
