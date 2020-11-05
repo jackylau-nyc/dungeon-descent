@@ -1,5 +1,5 @@
 # Dungeon Descent
-![Main Menu](menu-background.png)
+![Main Menu](https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/menu_background.png)
 - A rogue-like dungeon crawler made in Python and using the TCOD library
 
 ## Index
@@ -50,7 +50,7 @@ Left Hand Controls | Right Hand Controls
 [ESC] - Quit Game |
 [TAB] - History |
 
-Mouse can be used
+Mouse can be used to highlight tiles and select targets
 
 ## Development
 
