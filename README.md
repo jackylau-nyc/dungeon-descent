@@ -84,4 +84,5 @@ List all the pre-requisites the system needs to develop this project.
 
 ## Credit/Acknowledgment
 [TStand90](https://github.com/TStand90)
+
 [RogueBasin](http://www.roguebasin.com/index.php?title=Complete_Roguelike_Tutorial,_using_python%2Blibtcod)
