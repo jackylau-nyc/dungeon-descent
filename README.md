@@ -17,7 +17,7 @@ A rogue-like dungeon crawler game made in Python and using the TCOD library
 - [Credit/Acknowledgment](#star2-creditacknowledgment)
 
 ## About
-A multi-level dungeon crawler game entirely in the terminal. A tunneling algorithm was used to procedurally generate each floor of the dungeon with items and monsters scattered throughout the rooms. A basic AI is implemented to control the monsters actions, the engine handles the overworld view, and the input-handler handles player input. As you survive combat, you gain experience to level up and as you progress through the dungeon floors, the loot gets better but the difficulty scales up.
+A multi-level dungeon crawler game entirely in the terminal. A tunneling algorithm was used to procedurally generate each floor of the dungeon with items and monsters scattered throughout the rooms. A basic AI is implemented to control the monsters actions and the engine handles the overworld view. As you survive combat, you gain experience to level up and as you progress through the dungeon floors, the loot gets better but the difficulty scales up.
 
 ## Usage
 
@@ -70,7 +70,7 @@ List all the pre-requisites the system needs to develop this project.
 
  2. **Create a pull request**
 
- It can't get better then this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/jackylau-nyc/dungeon-descent/pulls) and make a pull request.
+ It can't get better than this, your pull request will be appreciated by the community. You can get started by picking up any open issues from [here](https://github.com/jackylau-nyc/dungeon-descent/pulls) and make a pull request.
 
  > If you are new to open-source, make sure to check read more about it [here](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) and learn more about creating a pull request [here](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github).
 
