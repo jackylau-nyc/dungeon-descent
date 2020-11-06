@@ -83,4 +83,5 @@ List all the pre-requisites the system needs to develop this project.
 <img src="https://raw.githubusercontent.com/jackylau-nyc/dungeon-descent/main/gameplay_ss.png" width="800">
 
 ## Credit/Acknowledgment
-Me!
+[TStand90](https://github.com/TStand90)
+[RogueBasin](http://www.roguebasin.com/index.php?title=Complete_Roguelike_Tutorial,_using_python%2Blibtcod)
